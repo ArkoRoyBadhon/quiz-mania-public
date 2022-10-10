@@ -7,9 +7,9 @@ const Header = () => {
     return (
         <div className='header'>
             <nav className='container d-flex justify-content-between align-items-center'>
-            <logo>
+            <div>
                 <div className='fw-bold text-danger'>Quiz Mania</div>
-            </logo>
+            </div>
             <div className="links">
                 <NavLink className={({isActive}) => isActive ? 'active' : undefined} to='/home'>Home</NavLink>
                 <NavLink to='/statics'>Statics</NavLink>
