@@ -12,5 +12,9 @@
 .links a {
     text-decoration: none;
     font-weight: 600;
-    
+    margin-left: 10px;
+}
+
+.active {
+    color: red;
 }

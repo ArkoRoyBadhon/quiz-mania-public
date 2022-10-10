@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
+    // let isActive = false
     return (
         <div className='header'>
             <nav className='container d-flex justify-content-between align-items-center'>
@@ -10,9 +11,9 @@ const Header = () => {
                 <div className='fw-bold text-danger'>Quiz Mania</div>
             </logo>
             <div className="links">
-                <NavLink className="ms-3" to='/'>Home</NavLink>
-                <NavLink className="ms-3" to='/'>Statics</NavLink>
-                <NavLink className="ms-3" to='/'>Blog</NavLink>
+                <NavLink className={({isActive}) => isActive ? 'active' : undefined} to='/home'>Home</NavLink>
+                <NavLink to='/statics'>Statics</NavLink>
+                <NavLink to='/blog'>Blog</NavLink>
             </div>
         </nav>
         </div>
