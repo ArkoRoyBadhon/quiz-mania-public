@@ -8,7 +8,7 @@ const Home = () => {
     // console.log(topics);
     const handleSelect = (id) => {
         // console.log(id);
-        navigate(`/home/${id}`)
+        navigate(`/quiz/${id}`)
     }
     return (
         <div className='container'>
