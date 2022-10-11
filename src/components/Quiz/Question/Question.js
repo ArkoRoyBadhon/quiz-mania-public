@@ -4,7 +4,7 @@ import './Question.css'
 
 const Question = ({ ques,handleClick,id }) => {
     const { options, question } = ques;
-    // console.log(id);
+    // console.log(question);
 
     
 
