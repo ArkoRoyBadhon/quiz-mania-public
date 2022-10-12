@@ -3,6 +3,7 @@
     opacity: 0.4;
 }
 .img img{
+    width: fit-content;
     height: 400px;
     background-color: rgb(13, 20, 20);
     filter: brightness(50%);
@@ -14,8 +15,9 @@
 }
 
 @media only screen and (max-width: 600px) {
-    /* .img img{
-        height: 400px;
-    } */
+    
+    .row {
+        margin: auto;
+    }
     
   }
