@@ -18,7 +18,7 @@ const QuizBar = () => {
                     }
                     return singleTopic;
                 })
-                console.log(topicData);
+                // console.log(topicData);
                 setTopics(topicData);
             })
     }, [])

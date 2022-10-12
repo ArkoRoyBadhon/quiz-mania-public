@@ -5,7 +5,7 @@ const QOptions = ({ number, handleClick, id }) => {
     // console.log(number, id);
     return (
         <div className='p-2 my-2'>
-            <div id={id} onClick={(e) => handleClick(number, id, e)} className={`border p-2 quesOption text-muted`}>
+            <div id={id} onClick={(e) => handleClick(number, id, e)} className={`border p-2 quesOption text-dark rounded`}>
                 {number}
             </div>
         </div>

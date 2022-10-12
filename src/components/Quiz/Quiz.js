@@ -46,11 +46,8 @@ const Quiz = () => {
         const data = questions.find(question => question.id === id)
         const resultToast = data.correctAnswer;
         toast("Correct Ans is: " + resultToast);
-        // toast(resultToast);
-        // alert(resultToast)
     }
 
-    console.log('last', count);
     return (
 
         <div>
