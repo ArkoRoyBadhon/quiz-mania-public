@@ -22,8 +22,8 @@ const Home = () => {
                             
                             <div class="carousel-caption d-md-block  div-info">
                                 <div >
-                                    <h1>Welcome to Our Quiz Mania</h1>
-                                    <p>You can test youself by giving our quiz</p>
+                                    <h1 className='fw-bolder'>Welcome to Our Quiz Mania</h1>
+                                    <p className='fs-5'>You can test youself by giving our quiz</p>
                                 </div>
                             </div>
                         </div>
@@ -31,7 +31,8 @@ const Home = () => {
                 </div>
             </div>
             <div className='container'>
-                <div className="row g-5 mt-3">
+                <h3 className='mt-5 fw-bold'>Topic for Quiz</h3>
+                <div className="row g-5 mt-3 mb-5">
                     {
                         topics.data.map(topic =>
                             <Card key={topic.id} topic={topic} handleSelect={handleSelect}></Card>

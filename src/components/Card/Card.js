@@ -10,7 +10,7 @@ const Card = ({ topic, handleSelect }) => {
                     <img className='img-fluid' src={logo} alt="" />
                 </div>
                 <div className="topic-info d-flex p-4 justify-content-between">
-                    <h5>Name: {name}</h5>
+                    <h5><strong>Name:</strong> {name}</h5>
                     <button onClick={()=>handleSelect(id)} className='btn btn-primary'>Select</button>
                 </div>
             </div>
