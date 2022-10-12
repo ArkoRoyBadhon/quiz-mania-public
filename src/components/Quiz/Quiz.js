@@ -13,7 +13,7 @@ const Quiz = () => {
     const { name, questions, total } = topic.data;
     // console.log('ff',questions);
     let count = 0;
-    console.log('initital', count);
+    // console.log('initital', count);
 
     const handleClick = (number, id, e) => {
         const result = questions.find(individual => individual.id === id);
@@ -38,6 +38,11 @@ const Quiz = () => {
         arr.push(id);
     }
 
+    const handleEyeBtn = (id) => {
+        const data = questions.find(question => question.id === id)
+        alert(data.correctAnswer)
+    }
+
     console.log('last', count);
     return (
         
@@ -46,7 +51,7 @@ const Quiz = () => {
                 <h4>Total questions: {total}</h4>
                 <p>Correct Answer is : {correctAns}/{count}</p>
                 {
-                    questions.map(ques => <Question key={ques.id} ques={ques} id={ques.id} handleClick={handleClick}></Question>)
+                    questions.map(ques => <Question key={ques.id} ques={ques} id={ques.id} handleClick={handleClick} handleEyeBtn={handleEyeBtn}></Question>)
                 }
             </div>
     );
