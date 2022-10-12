@@ -36,8 +36,7 @@ const QuizBar = () => {
       }
 
     useEffect(() => {
-        window.addEventListener('resize', detectSize)
-    
+        window.addEventListener('resize', detectSize);
         return () => {
           window.removeEventListener('resize', detectSize)
         }

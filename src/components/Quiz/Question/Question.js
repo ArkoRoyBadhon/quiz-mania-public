@@ -6,17 +6,17 @@ import './Question.css'
 import 'react-toastify/dist/ReactToastify.css';
 
 
-
 const Question = ({ ques, handleClick, id, handleEyeAns }) => {
     const { options, question } = ques;
-
     return (
         <div className='d-flex justify-content-center'>
             <div className='question text-start my-3 p-3 rounded shadow'>
                 <div className='d-flex justify-content-between'>
-                    {`${question}`}
-                    <FontAwesomeIcon className='ms-auto' icon={faEye} onClick={()=>handleEyeAns(id)} />
-                    
+
+
+                    {`${question.slice(3, question.length - 4)}`}
+                    <FontAwesomeIcon className='ms-auto' icon={faEye} onClick={() => handleEyeAns(id)} />
+
                 </div>
                 <br />
                 <div className="d-flex my-2 flex-wrap">
