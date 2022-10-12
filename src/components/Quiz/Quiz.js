@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Question from './Question/Question';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Quiz = () => {
@@ -19,41 +21,46 @@ const Quiz = () => {
         const result = questions.find(individual => individual.id === id);
         let findY = arr.find(elem => elem === id)
         if (findY) {
-            console.log('again click');
+            // console.log('again click');
+            toast('You already answered this question');
+            
         } else {
-            count++;
-            console.log('inside', count);
+            // count++;
+            // console.log('inside', count);
             if (result) {
                 if (result.correctAnswer === number) {
                     e.target.classList.add('selectBtnRight');
-                    alert('yes you click on right button');
+                    toast('yes!!! You click on right button');
 
                     // correctAns += 1;
                 } else {
                     e.target.classList.add('selectBtnWrong');
-                    alert(`you click wrong button. right ans is ${result.correctAnswer}`)
+                    toast(`Ohh no!! You click wrong button. right ans is ${result.correctAnswer}`);
                 }
             }
         }
         arr.push(id);
     }
 
-    const handleEyeBtn = (id) => {
+    const handleEyeAns = (id) => {
         const data = questions.find(question => question.id === id)
-        alert(data.correctAnswer)
+        const resultToast = data.correctAnswer;
+        toast("Correct Ans is: " + resultToast);
+        // toast(resultToast);
+        // alert(resultToast)
     }
 
     console.log('last', count);
     return (
-        
-            <div>
-                <h2>Quiz for {name}</h2>
-                <h4>Total questions: {total}</h4>
-                <p>Correct Answer is : {correctAns}/{count}</p>
-                {
-                    questions.map(ques => <Question key={ques.id} ques={ques} id={ques.id} handleClick={handleClick} handleEyeBtn={handleEyeBtn}></Question>)
-                }
-            </div>
+
+        <div>
+            <h2>Quiz for {name}</h2>
+            <h4>Total questions: {total}</h4>
+            <p>Correct Answer is : {correctAns}/{count}</p>
+            {
+                questions.map(ques => <Question key={ques.id} ques={ques} id={ques.id} handleClick={handleClick} handleEyeAns={handleEyeAns}></Question>)
+            }
+        </div>
     );
 };
 

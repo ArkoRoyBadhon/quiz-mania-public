@@ -7,6 +7,9 @@ import Blog from './components/Blog/Blog';
 import Error from './components/ErrorPage/Error';
 import Quiz from './components/Quiz/Quiz';
 
+
+
+
 function App() {
   const router = createBrowserRouter([
     {

@@ -31,7 +31,7 @@ const Home = () => {
                 </div>
             </div>
             <div className='container'>
-                <div className="row g-3 mt-3">
+                <div className="row g-5 mt-3">
                     {
                         topics.data.map(topic =>
                             <Card key={topic.id} topic={topic} handleSelect={handleSelect}></Card>
