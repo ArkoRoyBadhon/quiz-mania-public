@@ -1,0 +1,21 @@
+.img {
+    background-color: black;
+    opacity: 0.4;
+}
+.img img{
+    height: 400px;
+    background-color: rgb(13, 20, 20);
+    filter: brightness(50%);
+}
+
+.div-info {
+    margin-bottom: 8rem;
+    color: rgb(205, 42, 42);
+}
+
+@media only screen and (max-width: 600px) {
+    /* .img img{
+        height: 400px;
+    } */
+    
+  }
